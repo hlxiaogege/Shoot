@@ -188,20 +188,145 @@
       <mt-tab-container-item id="tab3">
         <mt-header fixed title="个人中心"></mt-header>
         <div style="height:41px"></div>
-          <div class="aui-inter-user">
-            <div class="aui-flex">
-              <div class="aui-inter-user-img">
-                <img src="../../public/img/user-logo-003.png">
-              </div>
-              <div class="aui-flex-box">
-                <h2>185****2894</h2>
-                <p>账户余额<i>0.00</i></p>
-              </div>
-              <div class="aui-inter-user-no">
-                <a href="javascript:;">立即提现</a>
-              </div>
+        <div class="aui-inter-user">
+          <div class="aui-flex">
+            <div class="aui-inter-user-img">
+              <img src="../../public/img/user-logo-003.png">
+            </div>
+            <div class="aui-flex-box">
+              <h2>185****2894</h2>
+              <p>账户余额<i>0.00</i></p>
+            </div>
+            <div class="aui-inter-user-no">
+              <a href="javascript:;">立即提现</a>
             </div>
           </div>
+        </div>
+        <div class="aui-inter-grids aui-inter-grids-blue">
+          <a href="javascript:;" class="aui-grids-item">
+            <h3>总收益</h3>
+            <p>18.90</p>
+          </a>
+           <a href="javascript:;" class="aui-grids-item">
+            <h3>当日收益</h3>
+            <p>78.90</p>
+          </a>
+           <a href="javascript:;" class="aui-grids-item">
+            <h3>已提现</h3>
+            <p>888.90</p>
+          </a>
+        </div>
+        <div class="aui-palace aui-palace-nav">
+          <a href="javascript:;" class="aui-palace-grid">
+            <div class="aui-palace-grid-icon">
+              <img src="../../public/img/icon-nav-001.png">
+            </div>
+            <div class="aui-palace-grid-text">
+              <p>我的卡片</p>
+            </div>
+          </a>
+          <a href="javascript:;" class="aui-palace-grid">
+            <div class="aui-palace-grid-icon">
+              <img src="../../public/img/icon-nav-002.png">
+            </div>
+            <div class="aui-palace-grid-text">
+              <p>提现列表</p>
+            </div>
+          </a>
+          <a href="javascript:;" class="aui-palace-grid">
+            <div class="aui-palace-grid-icon">
+              <img src="../../public/img/icon-nav-003.png">
+            </div>
+            <div class="aui-palace-grid-text">
+              <p>收益列表</p>
+            </div>
+          </a>
+          <a href="javascript:;" class="aui-palace-grid">
+            <div class="aui-palace-grid-icon">
+              <img src="../../public/img/icon-nav-004.png">
+            </div>
+            <div class="aui-palace-grid-text">
+              <p>我的团队</p>
+            </div>
+          </a>
+        </div>
+        <div class="divHeight"></div>
+        <div class="aui-member-list">
+          <!-- 修改密码 -->
+          <a href="javascript:;" class="aui-flex aui-flex-bg b-line">
+            <div class="aui-info-img">
+              <img src="../../public/img/icon-003.png">
+            </div>
+            <div class="aui-flex-box">
+              <p>修改密码</p>
+            </div>
+            <div class="aui-ren-arrow">
+              <span></span>
+            </div>
+          </a>
+          <!-- 分享好友 -->
+          <a href="javascript:;" class="aui-flex aui-flex-bg b-line">
+            <div class="aui-info-img">
+              <img src="../../public/img/icon-005.png">
+            </div>
+            <div class="aui-flex-box">
+              <p>分享好友</p>
+            </div>
+            <div class="aui-ren-arrow">
+              <span></span>
+            </div>
+          </a>
+          <!-- APP下载 -->
+          <a href="javascript:;" class="aui-flex aui-flex-bg b-line">
+            <div class="aui-info-img">
+              <img src="../../public/img/icon-006.png">
+            </div>
+            <div class="aui-flex-box">
+              <p>APP下载</p>
+            </div>
+            <div class="aui-ren-arrow">
+              <span></span>
+            </div>
+          </a>
+          <!-- 联系客服 -->
+          <a href="javascript:;" class="aui-flex aui-flex-bg b-line">
+            <div class="aui-info-img">
+              <img src="../../public/img/icon-007.png">
+            </div>
+            <div class="aui-flex-box">
+              <p>联系客服</p>
+            </div>
+            <div class="aui-ren-arrow">
+              <span></span>
+            </div>
+          </a>
+          <!-- 技术支持 -->
+          <a href="javascript:;" class="aui-flex aui-flex-bg b-line">
+            <div class="aui-info-img">
+              <img src="../../public/img/icon-010.png">
+            </div>
+            <div class="aui-flex-box">
+              <p>技术支持</p>
+            </div>
+            <div class="aui-ren-arrow">
+              <span></span>
+            </div>
+          </a>
+          <!-- 退出登录 -->
+          <a href="javascript:;" class="aui-flex aui-flex-bg b-line">
+            <div class="aui-info-img">
+              <img src="../../public/img/icon-009.png">
+            </div>
+            <div class="aui-flex-box">
+              <p>退出登录</p>
+            </div>
+            <div class="aui-ren-arrow">
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <div class="divHeight"></div>
+        <div style="height:50px"></div>
       </mt-tab-container-item>
     </mt-tab-container>
     <footer>
@@ -270,8 +395,6 @@ export default {
       ],
     }
   },
-  
-  
 }
 </script>
 <style scoped>
@@ -750,5 +873,99 @@ export default {
   font-size: 0.8rem;
   border-radius: 20px;
   padding: 0.25rem 0.6em;
+}
+/* 3块 */
+.aui-inter-grids {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 0.3rem;
+  padding-top: 0.3rem;
+  background: #28a9ff;
+}
+.aui-inter-grids-blue .aui-grids-item {
+  width: 33.333%;
+}
+.aui-grids-item {
+  float: left;
+  position: relative;
+  z-index: 0;
+  padding: 0.32rem 0;
+  font-size: 0.85rem;
+  text-align: center;
+  color: #fff;
+}
+.aui-grids-item:not(:nth-child(3n)):before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  top: 15px;
+  right: 0;
+  height: 45%;
+  border-right: 1px solid #D9D9D9;
+  transform: scaleX(0.5);
+  transform-origin: 100% 0;
+}
+.aui-grids-item h3 {
+  color: rgba(255,255,255,0.9);
+  font-size: 0.92rem;
+  font-weight: normal;
+}
+.aui-grids-item p {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+}
+/* 列表 */
+.aui-member-list {
+  background: #ffffff;
+  font-family: "Apple Braille";
+}
+.aui-member-list .aui-flex {
+  padding: 1rem;
+}
+.aui-info-img {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.3rem;
+}
+.aui-info-img img{
+  border: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.aui-flex-box {
+  flex: 1;
+  min-width: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.aui-member-list p {
+  color: #6f6f6f;
+  font-size: 0.85rem;
+}
+.aui-ren-arrow {
+  text-align: right;
+  color: #808080;
+  padding-right: 13px;
+  position: relative;
+}
+.aui-ren-arrow span {
+  font-size: 0.8rem;
+  color: #858d95;
+}
+.aui-ren-arrow:after {
+  content: " ";
+  display: inline-block;
+  height: 7px;
+  width: 7px;
+  border-width: 1px 1px 0 0;
+  border-color: #c1c1c1;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  margin-top: -4px;
+  right: 2px;
 }
 </style>
