@@ -13,6 +13,9 @@ Vue.use(MintUI);
 import Vant from 'vant';
 import 'vant/lib/index.css';
 Vue.use(Vant);
+import vueSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
+Vue.use(vueSwiper)
 
 // 页头全局组件
 import HeadList from './components/Head_list'

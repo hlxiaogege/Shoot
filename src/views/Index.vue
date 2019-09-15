@@ -859,7 +859,7 @@ export default {
 }
 .aui-flex-box h2 {
   color: #fff;
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin-bottom: 0.4rem;
 }
 .aui-flex-box p {
