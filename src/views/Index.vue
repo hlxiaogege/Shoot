@@ -19,38 +19,38 @@
           </div>
         </div>
         <div class="aui-palace aui-palace-nav">
-          <a href="javascript:;" class="aui-palace-grid">
+          <router-link to="/card" class="aui-palace-grid">
             <div class="aui-palace-grid-icon">
               <img src="../../public/img/icon-nav-001.png">
             </div>
             <div class="aui-palace-grid-text">
               <p>我的卡片</p>
             </div>
-          </a>
-          <a href="javascript:;" class="aui-palace-grid">
+          </router-link>
+          <router-link to="/carry" class="aui-palace-grid">
             <div class="aui-palace-grid-icon">
               <img src="../../public/img/icon-nav-002.png">
             </div>
             <div class="aui-palace-grid-text">
               <p>提现列表</p>
             </div>
-          </a>
-          <a href="javascript:;" class="aui-palace-grid">
+          </router-link>
+          <router-link to="/carry" class="aui-palace-grid">
             <div class="aui-palace-grid-icon">
               <img src="../../public/img/icon-nav-003.png">
             </div>
             <div class="aui-palace-grid-text">
               <p>收益列表</p>
             </div>
-          </a>
-          <a href="javascript:;" class="aui-palace-grid">
+          </router-link>
+          <router-link to="/group" class="aui-palace-grid">
             <div class="aui-palace-grid-icon">
               <img src="../../public/img/icon-nav-004.png">
             </div>
             <div class="aui-palace-grid-text">
               <p>我的团队</p>
             </div>
-          </a>
+          </router-link>
         </div>
         <div class="divHeight"></div>
         <mt-swipe :auto="4000" style="width:100%;height:8rem">
@@ -72,16 +72,15 @@
           <div>
             <van-swipe :autoplay="3000" style="height: 20px;" :show-indicators="false" vertical>
               <van-swipe-item v-for="(item,index) in list" :key="index">
-                <a href="javascript:;">{{item}}</a>
+                <router-link to="/page">{{item}}</router-link>
               </van-swipe-item>
-              
             </van-swipe>
           </div>
         </div>
         <div class="divHeight"></div>
         <div class="aui-flex aui-flex-bottom">
           <div class="aui-flex-box aui-flex-box-one">
-            <a href="javascript:;" class="aui-video">
+            <router-link to="/video" class="aui-video">
               <div class="aui-video-title">
                 <h2>视频介绍</h2>
                 <span>VIDEO</span>
@@ -89,11 +88,11 @@
               <div class="aui-video-img">
                 <img src="../../public/img/i-video.png">
               </div>
-            </a>
+            </router-link>
           </div>
           <div class="aui-flex-box aui-flex-box-two">
             <div class="aui-ad-two-img">
-              <a href="javascript:;" class="aui-video aui-join">
+              <router-link to="/join" class="aui-video aui-join">
                  <div class="aui-video-title">
                   <h2>加入我们</h2>
                   <span>JOIN US</span>
@@ -101,11 +100,11 @@
                  <div class="aui-video-img">
                   <img src="../../public/img/i-join.png">
                 </div>
-              </a>
+              </router-link>
             </div>
             <div class="aui-three-img">
               <div class="aui-fl-img">
-                <a href="javascript:;" class="aui-video aui-join aui-share">
+                <router-link to="/share" class="aui-video aui-join aui-share">
                    <div class="aui-video-title">
                     <h2>分享介绍</h2>
                     <span>SHARE</span>
@@ -113,10 +112,10 @@
                   <div class="aui-video-img">
                     <img src="../../public/img/i-share.png">
                   </div>
-                </a>
+                </router-link>
               </div>
               <div class="aui-fr-img">
-                <a href="javascript:;" class="aui-video aui-join aui-about">
+                <router-link to="/platform" class="aui-video aui-join aui-about">
                   <div class="aui-video-title">
                     <h2>关于平台</h2>
                     <span>ABOUT</span>
@@ -124,7 +123,7 @@
                   <div class="aui-video-img">
                     <img src="../../public/img/i-about.png">
                   </div>
-                </a>
+                </router-link>
               </div>
             </div>
           </div>
@@ -217,43 +216,43 @@
           </a>
         </div>
         <div class="aui-palace aui-palace-nav">
-          <a href="javascript:;" class="aui-palace-grid">
+          <router-link to="/card" class="aui-palace-grid">
             <div class="aui-palace-grid-icon">
               <img src="../../public/img/icon-nav-001.png">
             </div>
             <div class="aui-palace-grid-text">
               <p>我的卡片</p>
             </div>
-          </a>
-          <a href="javascript:;" class="aui-palace-grid">
+          </router-link>
+          <router-link to="/carry" class="aui-palace-grid">
             <div class="aui-palace-grid-icon">
               <img src="../../public/img/icon-nav-002.png">
             </div>
             <div class="aui-palace-grid-text">
               <p>提现列表</p>
             </div>
-          </a>
-          <a href="javascript:;" class="aui-palace-grid">
+          </router-link>
+          <router-link to="/carry" class="aui-palace-grid">
             <div class="aui-palace-grid-icon">
               <img src="../../public/img/icon-nav-003.png">
             </div>
             <div class="aui-palace-grid-text">
               <p>收益列表</p>
             </div>
-          </a>
-          <a href="javascript:;" class="aui-palace-grid">
+          </router-link>
+          <router-link to="/group" class="aui-palace-grid">
             <div class="aui-palace-grid-icon">
               <img src="../../public/img/icon-nav-004.png">
             </div>
             <div class="aui-palace-grid-text">
               <p>我的团队</p>
             </div>
-          </a>
+          </router-link>
         </div>
         <div class="divHeight"></div>
         <div class="aui-member-list">
           <!-- 修改密码 -->
-          <a href="javascript:;" class="aui-flex aui-flex-bg b-line">
+          <router-link to="/update" class="aui-flex aui-flex-bg b-line">
             <div class="aui-info-img">
               <img src="../../public/img/icon-003.png">
             </div>
@@ -263,9 +262,9 @@
             <div class="aui-ren-arrow">
               <span></span>
             </div>
-          </a>
+          </router-link>
           <!-- 分享好友 -->
-          <a href="javascript:;" class="aui-flex aui-flex-bg b-line">
+          <router-link to="/friend" class="aui-flex aui-flex-bg b-line">
             <div class="aui-info-img">
               <img src="../../public/img/icon-005.png">
             </div>
@@ -275,9 +274,9 @@
             <div class="aui-ren-arrow">
               <span></span>
             </div>
-          </a>
+          </router-link>
           <!-- APP下载 -->
-          <a href="javascript:;" class="aui-flex aui-flex-bg b-line">
+          <router-link to="/download" class="aui-flex aui-flex-bg b-line">
             <div class="aui-info-img">
               <img src="../../public/img/icon-006.png">
             </div>
@@ -287,9 +286,9 @@
             <div class="aui-ren-arrow">
               <span></span>
             </div>
-          </a>
+          </router-link>
           <!-- 联系客服 -->
-          <a href="javascript:;" class="aui-flex aui-flex-bg b-line">
+          <router-link to="/service" class="aui-flex aui-flex-bg b-line">
             <div class="aui-info-img">
               <img src="../../public/img/icon-007.png">
             </div>
@@ -299,7 +298,7 @@
             <div class="aui-ren-arrow">
               <span></span>
             </div>
-          </a>
+          </router-link>
           <!-- 技术支持 -->
           <a href="javascript:;" class="aui-flex aui-flex-bg b-line">
             <div class="aui-info-img">
@@ -313,7 +312,7 @@
             </div>
           </a>
           <!-- 退出登录 -->
-          <a href="javascript:;" class="aui-flex aui-flex-bg b-line">
+          <router-link to="/login" class="aui-flex aui-flex-bg b-line">
             <div class="aui-info-img">
               <img src="../../public/img/icon-009.png">
             </div>
@@ -323,7 +322,7 @@
             <div class="aui-ren-arrow">
               <span></span>
             </div>
-          </a>
+          </router-link>
         </div>
         <div class="divHeight"></div>
         <div style="height:50px"></div>
@@ -394,6 +393,9 @@ export default {
         
       ],
     }
+  },
+  methods: {
+    
   },
 }
 </script>

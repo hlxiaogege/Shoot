@@ -4,9 +4,9 @@
       <div class="aui-code-box">
         <div class="aui-code-logo">
           <div class="aui-code-logo-img">
-            <img src="../../public/img/logo.png">
+            <img src="../../public/img/taobao.jpg">
           </div>
-          <h2>AUI素材网</h2>
+          <h2>淘宝网</h2>
         </div>
         <form action="">
           <p class="aui-code-line">

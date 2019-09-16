@@ -40,7 +40,7 @@
         </div>
       </div>
       <div class="div-btn">
-        <a href="javascript:;" class="btn-submit">提交</a>
+        <button @click="addCard" class="btn-submit">提交</button>
       </div>
     </div>
     <!-- 银行 -->
@@ -127,6 +127,12 @@ export default {
     },
     onPositionChange(picker, values){
       this.positionContent=values[0]+"-"+values[1];
+    },
+    addCard(){
+      this.$toast("添加成功");
+      setTimeout(()=>{
+        this.$router.push("/card");
+      },3000);
     }
   },
 }
