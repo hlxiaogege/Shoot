@@ -10,7 +10,7 @@
       <div class="msg-box b-line">
         <span class="msg-item-tit">收款银行</span>
         <div class="input-right">
-          <input placeholder="请选择收款银行" readonly @focus="showBank" :value="bankContent">
+          <input placeholder="请选择收款银行" v-model="bank" @focus="bShow" readonly >
           <div class="down_arrow"></div>
         </div>
       </div>
@@ -35,7 +35,7 @@
       <div class="msg-box b-line">
         <span class="msg-item-tit">收款地区</span>
         <div class="input-right">
-          <input placeholder="请输入收款地区" readonly @focus="showPosition" :value="positionContent">
+          <input placeholder="请输入收款地区" v-model="place" @focus="pShow" readonly>
           <div class="down_arrow"></div>
         </div>
       </div>
@@ -44,24 +44,18 @@
       </div>
     </div>
     <!-- 银行 -->
-    <mt-popup v-model="bankShow" position="bottom">
-      <ul class="mint-popup-head">
-        <li @click="cancel">取消</li>
-        <li @click="comfirm">确认</li>
-      </ul>
-      <mt-picker :slots="Bslots"  @change="onBankChange"></mt-picker>
-    </mt-popup>
+    <van-popup v-model="bankShow" position="bottom">
+      <van-picker show-toolbar :columns="Bslots"
+        @cancel="inCancel" @confirm="inConfirm"/>
+    </van-popup>
     <!-- 位置 -->
-    <mt-popup v-model="positionShow" position="bottom">
-      <ul class="mint-popup-head">
-        <li @click="Pcancel">取消</li>
-        <li @click="Pcomfirm">确认</li>
-      </ul>
-      <mt-picker :slots="Pslots"  @change="onPositionChange"></mt-picker>
-    </mt-popup>
+    <van-popup position="bottom" v-model="positionShow">
+      <van-area :area-list="areaList" @confirm="onConfirm" @cancel="onCancel"/>
+    </van-popup>
   </div>
 </template>
 <script>
+import AreaList from '../../public/js/area.js'
 export default {
   data() {
     return {
@@ -75,58 +69,31 @@ export default {
           textAlign: 'right'
         },
       ],
-      Pslots: [
-         {
-          flex: 1,
-          values: ['北京', '上海', '天津', '重庆', '河北', '山西'],
-          className: 'slot1',
-          textAlign: 'right'
-        }, {
-          divider: true,
-          content: '-',
-          className: 'slot2'
-        }, {
-          flex: 1,
-          values: ['孝感市', '黄冈市', '咸宁市', '武汉市', '荆州市', '襄阳市'],
-          className: 'slot3',
-          textAlign: 'left'
-        }
-      ],
-      bankContent:"请选择银行",
-      positionContent:"请选择收款地区",
+      areaList:AreaList,
+      place:"",
+      bank:"",
     }
   },
   methods: {
-    onValuesChange(picker, values) {
-      if (values[0] > values[1]) {
-        picker.setSlotValue(1, values[0]);
-      }
-    },
-    showBank(){
-      this.bankShow=true;
-    },
-    onBankChange (picker, values) {
-      this.bankContent=values[0];
-    },
-    cancel(){
-      this.bankContent="",
-      this.bankShow=false;
-    },
-    comfirm(){
-      this.bankShow=false;
-    },
-    showPosition(){
+    pShow(){
       this.positionShow=true;
     },
-    Pcancel(){
-      this.positionContent="",
+    onConfirm(val){
+      this.positionShow=false;
+      this.place=val[0].name+"-"+val[1].name+"-"+val[2].name;
+    },
+    onCancel(){
       this.positionShow=false;
     },
-    Pcomfirm(){
-      this.positionShow=false;
+    bShow(){
+      this.bankShow=true;
     },
-    onPositionChange(picker, values){
-      this.positionContent=values[0]+"-"+values[1];
+    inConfirm(val){
+      this.bankShow=false;
+      this.bank=val[0];
+    },
+    inCancel(){
+      this.bankShow=false;
     },
     addCard(){
       this.$toast("添加成功");

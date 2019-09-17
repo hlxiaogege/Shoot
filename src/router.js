@@ -17,6 +17,7 @@ import Service from './views/Service'
 import Login from './views/Login'
 import Forget from './views/Forget'
 import Reg from './views/Reg'
+import Lian from './views/Lian'
 
 
 Vue.use(Router)
@@ -58,5 +59,6 @@ export default new Router({
     {path:"/forget",component:Forget},
     // 立即注册
     {path:"/reg",component:Reg},
+    {path:"/lian",component:Lian},
   ]
 })
